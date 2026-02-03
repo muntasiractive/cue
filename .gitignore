@@ -1,0 +1,4 @@
+echo "ssh-keygen" >> .gitignore
+echo "type" >> .gitignore
+echo "cat" >> .gitignore
+echo "git" >> .gitignore
