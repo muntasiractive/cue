@@ -1,73 +1,145 @@
-# React + TypeScript + Vite
+# Cue - Structured Prompt Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional, clean prompt builder for AI models with a modern dark theme. Built by [muntasiractive](https://www.muntasir.site).
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Structured Prompt Composition**: Build organized prompts with sections and rules
+- **Template System**: Browse pre-built templates across 4 categories (see [TEMPLATES.md](TEMPLATES.md))
+- **Multiple Output Formats**: Export to JSON, Markdown, or Plain Text
+- **Library Management**: Save and load your favorite prompts
+- **AI Testing Integration**: Test prompts directly with OpenRouter API
+- **Modern UI**: Clean, responsive design with Cue Dark Theme
+- **Smooth Animations**: Calm gradient effects and transitions
 
-## React Compiler
+## 📁 File Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+cue/
+├── index.html              # Main HTML file
+├── assets/
+│   ├── css/
+│   │   ├── style.css      # Main styles and animations
+│   │   └── templates.css  # Template system styles
+│   └── js/
+│       ├── app.js         # Application logic and state management
+│       └── templates.js   # Template system module
+├── templates/
+│   ├── prebuilt/          # Pre-built templates (8 templates)
+│   └── community/         # User-submitted templates
+└── README.md              # This file
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Design System
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Fonts
+- **Primary**: Poppins (400, 500, 600, 700)
+- **Code**: JetBrains Mono (400, 500, 600)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Color Palette
+- Background: `#0c0d0d`
+- Card Background: `#1e1f21`
+- Text Primary: `#ffffff`
+- Text Secondary: `#b4b5b7`
+- Accent: `#ffffff`
+
+### Animations
+- **Calm Gradient**: 6s ease-in-out infinite (panel titles)
+- **Fade In**: 0.5s ease (cards)
+- **Slide In**: 0.3s ease (messages)
+
+## 🛠️ Technologies
+
+- HTML5
+- CSS3 (Custom Properties, Grid, Flexbox)
+- Vanilla JavaScript (ES6+)
+- OpenRouter API Integration
+- LocalStorage for persistence
+
+## 💻 Usage
+
+### Local Development
+1. Clone the repository
+2. Open `index.html` in your browser
+3. No build process required - pure HTML/CSS/JS!
+
+### Using the Builder
+1. **Add Sections**: Create titled sections with content
+2. **Add Rules**: Define constraints and guidelines
+3. **Generate**: View formatted output in JSON, Markdown, or Plain Text
+4. **Save**: Store prompts in your library
+5. **Test**: Connect OpenRouter API to test with AI models
+
+### API Setup
+1. Get your API key from [OpenRouter](https://openrouter.ai)
+2. Enter it in the "OpenRouter API Key" field
+3. Click "Save API Key" to persist it
+4. Select a model and test your prompts
+
+## 📦 Features Breakdown
+
+### Template System
+- **Pre-built Templates**: 8 professional templates across 4 categories
+- **Category Filtering**: Marketing, Code, Analysis, Creative
+- **Featured Template**: Weekly spotlight template
+- **Rating System**: 1-5 star ratings for each template
+- **Download Tracking**: Monitor template popularity
+- **Community Templates**: User-submitted templates with attribution
+- **Import Options**: Import from URL or JSON file
+- **Template Submission**: Submit your own templates with GitHub profile
+
+### Template Categories
+
+**Marketing**
+- Email Marketing Campaign
+- Social Media Content Calendar
+
+**Code**
+- Code Review Assistant
+- Documentation Generator
+
+**Analysis**
+- Data Analysis Report
+- Competitor Analysis
+
+**Creative**
+- Creative Story Writer
+- Creative Brainstorming Session
+
+### Prompt Composition
+- Dynamic section management
+- Rule-based constraints
+- Real-time preview
+- Library storage
+
+### Export Options
+- **JSON**: Structured data format
+- **Markdown**: Document-friendly format
+- **Plain Text**: Simple, readable format
+
+### Testing
+- OpenRouter API integration
+- Model selection
+- Live testing
+- Result display
+
+## 🎯 Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## 🔗 Links
+
+- **Portfolio**: [www.muntasir.site](https://www.muntasir.site)
+- **GitHub**: [muntasiractive](https://github.com/muntasiractive)
+- **Sponsor**: [Ko-fi](https://ko-fi.com/muntasiractive)
+
+---
+
+## 📄 License
+
+© 2025 muntasiractive. All rights reserved.
+
+Built with ❤️ by muntasiractive | Powered by Cue Theme
